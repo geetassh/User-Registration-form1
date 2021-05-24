@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Users java</title>
+</head>
+<body bgcolor="#dc143c">
+    <div class="container text-center" align="center">
+        <div> <h1>List of all users</h1></div>
+       <div>
+           <table class="table table-striped table-bordered">
+               <thead class="thead-dark">
+               <tr>
+                   <th>User ID</th>
+                   <th>E-mail</th>
+                   <th>Password</th>
+                   <th>First Name</th>
+                   <th>Last Name</th>
+               </tr>
+               </thead>
+               <tbody>
+                    <tr each="user:${listUsers}">
+
+                        <td th:text="${user.id}"></td>
+                        <td text="${user.email}"></td>
+                        <td text="${user.firstname}"></td>
+                        <td text="${user.lastname}"></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">101</th>
+                        <td>geetahowal@gmail.com</td>
+                        <td>2020102</td>
+                        <td>Geeta</td>
+                        <td>Howal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">102</th>
+                        <td>mshjh@gmail.com</td>
+                        <td>2088902</td>
+                        <td>Shree</td>
+                        <td>Howal</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">101</th>
+                        <td>kartikm@gmail.com</td>
+                        <td>20202122</td>
+                        <td>Kartik</td>
+                        <td>Magade</td>
+                    </tr>
+               </tbody>
+           </table>
+       </div>
+
+    </div>
+    <button type="submit" >Go to login page</button>
+</body>
+</html>
